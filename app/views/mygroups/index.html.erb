@@ -1,0 +1,29 @@
+<div class="col-md-12">
+  <div class="mygroup">
+    <%= link_to("New mygroup", new_mygroup_path, class: "btn btn-primary pull-right") %>
+  </div>
+  <table class="table table-hover">
+  	<thead>
+  		<tr>
+  			<td>#</td>
+  			<td>Title</td>
+  			<td>Description</td>
+  		</tr>
+  	</thead>
+  	<tbody>
+  	  <% @mygroups.each do |mygroup| %>
+  	    <tr>
+  	    	<td>#</td>
+  	    	<td><%= link_to(mygroup.title, mygroup_path(mygroup)) %></td>
+  	    	<td><%= mygroup.description  %></td>
+  	    	<td>
+  	    		<%= link_to("Edit", edit_mygroup_path(mygroup), class: "btn btn-sm btn-default")  %>
+  	    		<%= link_to("Delete", group_path(group), class: "btn btn-sm btn-default", method: :delete, data: { confirm: "Are you sure?" } )  %>
+  	    	</td>
+  	    </tr>
+  	  		
+  	  <% end %>	
+  	</tbody>
+  </table>
+
+</div>
