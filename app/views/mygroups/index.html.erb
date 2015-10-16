@@ -1,6 +1,6 @@
 <div class="col-md-12">
   <div class="mygroup">
-    <%= link_to("New mygroup", new_mygroup_path, class: "btn btn-primary pull-right") %>
+    <%= link_to("新增討論版", new_mygroup_path, class: "btn btn-primary pull-right") %>
   </div>
   <table class="table table-hover">
   	<thead>
@@ -17,8 +17,8 @@
   	    	<td><%= link_to(mygroup.title, mygroup_path(mygroup)) %></td>
   	    	<td><%= mygroup.description  %></td>
   	    	<td>
-  	    		<%= link_to("Edit", edit_mygroup_path(mygroup), class: "btn btn-sm btn-default")  %>
-  	    		<%= link_to("Delete", group_path(group), class: "btn btn-sm btn-default", method: :delete, data: { confirm: "Are you sure?" } )  %>
+  	    		<%= link_to("編輯", edit_mygroup_path(mygroup), class: "btn btn-sm btn-default")  %>
+  	    		<%= link_to("刪除", mygroup_path(mygroup), class: "btn btn-sm btn-default", method: :delete, data: { confirm: "Are you sure?" } )  %>
   	    	</td>
   	    </tr>
   	  		

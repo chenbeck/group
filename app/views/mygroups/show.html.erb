@@ -1,1 +1,10 @@
-show.html.erb
+<div class="col-md-12">
+  
+  <div class="mygroup">
+    <%= link_to '編輯', edit_mygroup_path(@mygroup), class: "btn btn-primary pull-right" %>
+  </div>
+
+  <h2><%= @mygroup.title %></h2>
+  <p><%= @mygroup.description %></p>
+	
+</div>
