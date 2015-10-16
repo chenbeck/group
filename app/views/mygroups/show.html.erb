@@ -1,6 +1,7 @@
 <div class="col-md-12">
   
   <div class="mygroup">
+    <%= link_to '新增文章', new_mygroup_post_path(@mygroup), class: "btn btn-primary pull-right" %>
     <%= link_to '編輯', edit_mygroup_path(@mygroup), class: "btn btn-primary pull-right" %>
   </div>
 
@@ -19,8 +20,8 @@
     	  <tr>
     	  	<td><%= post.content %></td>
     	  	<td>
-    	  		<%= link_to("編輯", edit_mygroup_post_path(post.group, post), class: "btn btn-default btn-xs") %>
-    	  		<%= link_to("Delete", mygroup_post_path(post.group, post), class: "btn btn-default btn-xs", method: :delete, data: { confirm: "Are you sure?"})  %>
+    	  		<%= link_to("編輯", edit_mygroup_post_path(post.mygroup_id, post), class: "btn btn-default btn-xs") %>
+    	  		<%= link_to("Delete", mygroup_post_path(post.mygroup_id, post), class: "btn btn-default btn-xs", method: :delete, data: { confirm: "Are you sure?"})  %>
     	  	</td>
     	  </tr>
     		
