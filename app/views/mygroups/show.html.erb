@@ -6,5 +6,27 @@
 
   <h2><%= @mygroup.title %></h2>
   <p><%= @mygroup.description %></p>
+
+  <table class="table">
+    <thead>
+    	<tr>
+    		<th>文章</th>
+    		<th colspan="2"></th>
+    	</tr>
+    </thead>
+    <tbody>
+    	<% @posts.each do |post| %>
+    	  <tr>
+    	  	<td><%= post.content %></td>
+    	  	<td>
+    	  		<%= link_to("編輯", edit_mygroup_post_path(post.group, post), class: "btn btn-default btn-xs") %>
+    	  		<%= link_to("Delete", mygroup_post_path(post.group, post), class: "btn btn-default btn-xs", method: :delete, data: { confirm: "Are you sure?"})  %>
+    	  	</td>
+    	  </tr>
+    		
+    	<% end %>
+    </tbody>
+  	
+  </table>
 	
 </div>

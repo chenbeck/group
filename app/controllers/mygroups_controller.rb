@@ -5,6 +5,7 @@ class MygroupsController < ApplicationController
 
 	def show
 		@mygroup = Mygroup.find(params[:id])
+		@posts = @mygroup.posts #能在討論群組頁面 顯示所擁有的post
 	end
 
 	def new
